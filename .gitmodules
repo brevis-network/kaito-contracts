@@ -1,0 +1,6 @@
+[submodule "lib/forge-std"]
+	path = lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "lib/security-contracts"]
+	path = lib/security-contracts
+	url = https://github.com/brevis-network/security-contracts

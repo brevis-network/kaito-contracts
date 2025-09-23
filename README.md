@@ -1,2 +1,2 @@
-# kaito-contracts
-Brevis Campaign for Kaito leaderboard
+# Brevis Campaign for Kaito Leaderboard
+Privacy preserving ZK attestation for Kaito leaderboard.
