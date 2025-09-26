@@ -27,7 +27,7 @@ contract BrevisKaito is AccessControl, BrevisProofApp {
     bytes32 vkHash;
 
     // d2618ddac653714fc88be7cbbf2131886e3f5749adaad9b80fd4d696df11648e
-    bytes32 public constant REWARD_UPDATER_ROLE =
+    bytes32 public constant KADDR_UPDATER_ROLE =
         keccak256("kaddr_map_updater");
 
     function addCampaign(uint64 campId, uint64 multiplier) external onlyOwner {
@@ -65,7 +65,7 @@ contract BrevisKaito is AccessControl, BrevisProofApp {
     function addkAddrMapping(
         bytes calldata proof,
         bytes calldata appOutput
-    ) external onlyRole(REWARD_UPDATER_ROLE) {
+    ) external onlyRole(KADDR_UPDATER_ROLE) {
         _checkBrevisProof(_getDataChainId(), proof, appOutput, vkHash);
         uint64 campId = uint64(bytes8(appOutput[0:8]));
         address kAddr = address(bytes20(appOutput[8:28]));
